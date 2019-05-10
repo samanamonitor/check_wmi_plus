@@ -27,9 +27,10 @@
 # the full path is required since when Nagios runs this whole plugin becomes a subroutine of /usr/sbin/p1.pl
 # and when it becomes a subroutine there is no such thing as the current directory or the same directory as this script
 # eg $0 becomes /usr/sbin/p1.pl no matter where you install this script
-my $conf_file='/etc/check_wmi_plus/check_wmi_plus.conf';
+my $conf_file='/etc/nagios/check_wmi_plus/check_wmi_plus.conf';
 
 # we are looking for the dir where utils.pm is located. This is normally installed as part of Nagios
+use lib "/usr/local/nagios/libexec";
 use lib "/usr/lib/nagios/plugins";
 use lib "/usr/lib64/nagios/plugins"; 
 
